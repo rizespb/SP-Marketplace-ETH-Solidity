@@ -53,7 +53,7 @@ const OrderModal = ({ course, onClose, onSubmit, isNewPurchase }) => {
       setIsOpen(true)
       setOrder({ ...defaultOrder, price: eth.perItem })
     }
-  }, [course])
+  }, [course, eth.perItem])
 
   const closeModal = () => {
     setIsOpen(false)

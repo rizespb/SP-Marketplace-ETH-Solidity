@@ -47,7 +47,7 @@ export const useAdmin = ({ redirectTo }) => {
 
   useEffect(() => {
     if (requireInstall || (account.hasInitialResponse && !account.isAdmin) || account.isEmpty) router.push(redirectTo)
-  }, [account])
+  }, [account, redirectTo, requireInstall, router])
 
   return { account }
 }
